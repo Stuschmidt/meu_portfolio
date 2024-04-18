@@ -1,0 +1,260 @@
+/* styles.css */
+
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Cor de fundo do corpo em azul claro */
+}
+
+/* Estilos da navegação */
+nav {
+    background-color: #2980b9; /* Cor de fundo da barra de navegação em azul médio */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700; /* Cor do texto ao passar o mouse em amarelo */
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Adiciona espaçamento entre as seções */
+section + section {
+    margin-top: 50px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* Cor de fundo dos contêineres em branco */
+    border-radius: 10px; /* Borda arredondada nos contêineres */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra nos contêineres */
+    padding-bottom: 20px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #34495e; /* Cor do texto dos títulos em azul escuro */
+}
+
+section p {
+    color: #666;
+    font-size: 18px;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    /* Altere os estilos conforme necessário para telas menores */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Estilos da galeria de projetos */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3, .overlay p {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.overlay p {
+    font-size: 14px;
+}
+
+/* Estilos da seção de repositórios do GitHub */
+#github-repos {
+    background-color: #f0f3f5; /* Cor de fundo da seção de repositórios em cinza claro */
+    padding: 50px;
+}
+
+#repos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.repo {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.repo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.repo h3 {
+    background-color: #2980b9; /* Cor de fundo do título do repositório em azul médio */
+    color: #fff;
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;
+}
+
+.repo p {
+    padding: 10px;
+    margin: 0;
+}
+
+.repo a {
+    color: #333;
+    text-decoration: none;
+}
+
+.repo a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos do formulário de contato */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none; /* Impede o redimensionamento */
+}
+
+form textarea {
+    height: 150px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #2980b9; /* Cor de fundo do botão em azul médio */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #1c638f; /* Cor de fundo do botão em azul médio mais escuro */
+}
+
+/* Adicione este trecho ao seu arquivo styles.css */
+
+/* Adicione este trecho ao seu arquivo styles.css */
+
+/* Estilizando os links de contato */
+#contact {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact li {
+    margin-bottom: 15px;
+}
+
+#contact li a {
+    color: #2980b9; /* Cor azul do site */
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #2980b9; /* Cor da borda igual à cor do texto */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#contact li a:hover {
+    background-color: #2980b9; /* Cor de fundo igual à cor do texto */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos responsivos para os botões de contato */
+@media screen and (max-width: 768px) {
+    #contact li a {
+        padding: 8px 16px;
+    }
+}
+
